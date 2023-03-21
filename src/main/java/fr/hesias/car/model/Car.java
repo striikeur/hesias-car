@@ -46,13 +46,17 @@ public abstract class Car {
     protected Car() {
     }
 
-    public Car(UUID id, String name, String brand, Integer horsePower, Float fuelConsumption, Float fuelCapacity) {
+    protected Car(UUID id, String name, String brand, Integer horsePower, Float fuelConsumption, Float fuelCapacity) {
         this.id = id;
         this.name = name;
         this.brand = brand;
         this.horsePower = horsePower;
         this.fuelConsumption = fuelConsumption;
         this.fuelCapacity = fuelCapacity;
+    }
+
+    protected Car(UUID id) {
+        this.id = id;
     }
 
     public UUID getId() {

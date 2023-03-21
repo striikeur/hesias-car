@@ -22,9 +22,12 @@ public class Pilot extends Driver {
     protected Pilot() {
     }
 
-    public Pilot(UUID id, String name, Integer age, Car car, Integer height, List<Race> races) {
-        super(id, name, age, car);
+    public Pilot(UUID id, String name, Integer age, Integer height) {
+        super(id, name, age);
         this.height = height;
-        this.races = races;
+    }
+
+    public Integer getHeight() {
+        return height;
     }
 }

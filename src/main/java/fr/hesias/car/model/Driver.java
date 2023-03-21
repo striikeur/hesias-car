@@ -33,10 +33,25 @@ public class Driver {
     protected Driver() {
     }
 
-    public Driver(UUID id, String name, Integer age, Car car) {
+    public Driver(UUID id, String name, Integer age) {
         this.id = id;
         this.name = name;
         this.age = age;
-        this.car = car;
+    }
+
+    public UUID getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public Car getCar() {
+        return car;
     }
 }

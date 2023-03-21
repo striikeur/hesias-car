@@ -20,6 +20,10 @@ public class RacingCar extends Car {
     protected RacingCar() {
     }
 
+    public RacingCar(UUID id) {
+        super(id);
+    }
+
     public RacingCar(UUID id, String name, String brand, Integer horsePower, Float fuelConsumption, Float fuelCapacity, Float topSpeed) {
         super(id, name, brand, horsePower, fuelConsumption, fuelCapacity);
         this.topSpeed = topSpeed;
