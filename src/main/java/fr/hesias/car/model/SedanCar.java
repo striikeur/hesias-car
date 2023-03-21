@@ -20,8 +20,16 @@ public class SedanCar extends Car {
     protected SedanCar() {
     }
 
+    public SedanCar(UUID id) {
+        super(id);
+    }
+
     public SedanCar(UUID id, String name, String brand, Integer horsePower, Float fuelConsumption, Float fuelCapacity, Integer trunkSpace) {
         super(id, name, brand, horsePower, fuelConsumption, fuelCapacity);
         this.trunkSpace = trunkSpace;
+    }
+
+    public Integer getTrunkSpace() {
+        return trunkSpace;
     }
 }

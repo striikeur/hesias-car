@@ -31,4 +31,16 @@ public class Race extends Ride {
         this.winner = winner;
         this.cars = cars;
     }
+
+    public String getRaceTrack() {
+        return raceTrack;
+    }
+
+    public Pilot getWinner() {
+        return winner;
+    }
+
+    public List<Car> getCars() {
+        return cars;
+    }
 }
