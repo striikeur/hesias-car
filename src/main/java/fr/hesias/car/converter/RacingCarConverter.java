@@ -6,7 +6,7 @@ import fr.hesias.car.model.RacingCar;
 import java.util.ArrayList;
 import java.util.List;
 
-public class RacingCarConverter implements EntityToDtoConverter<RacingCar, RacingCarDTO> {
+public class RacingCarConverter extends EntityToDtoConverter<RacingCar, RacingCarDTO> {
     @Override
     public RacingCar dtoToEntity(RacingCarDTO racingCarDTO) {
         return new RacingCar(racingCarDTO.getId(),

@@ -7,7 +7,7 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "rides")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Ride {
 
     @Id

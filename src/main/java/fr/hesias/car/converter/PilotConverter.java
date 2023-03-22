@@ -7,7 +7,7 @@ import org.springframework.security.core.parameters.P;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PilotConverter implements EntityToDtoConverter<Pilot, PilotDTO> {
+public class PilotConverter extends EntityToDtoConverter<Pilot, PilotDTO> {
     @Override
     public Pilot dtoToEntity(PilotDTO pilotDTO) {
         return new Pilot(pilotDTO.getId(), pilotDTO.getName(), pilotDTO.getAge(), pilotDTO.getHeight());
