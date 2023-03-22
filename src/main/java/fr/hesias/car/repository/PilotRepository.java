@@ -12,7 +12,7 @@ import java.util.UUID;
 @Repository
 public interface PilotRepository extends JpaRepository<Pilot, UUID> {
 
-    @Query("select r.winner from RaceDTO r where r.raceTrack like :race")
+    @Query("select r.winner from Race r where r.raceTrack like :race")
     List<Pilot> findByRace(@Param("race") String race);
 
 }
