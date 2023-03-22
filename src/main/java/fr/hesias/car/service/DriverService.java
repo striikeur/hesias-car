@@ -32,6 +32,18 @@ public class DriverService {
         return driverDTOS;
     }
 
+    @Transactional(readOnly = true)
+    public List<DriverDTO> findAllByAge(int age) {
+        List<Driver> drivers = this.driverRepository.findByAge(age);
+        return this.driverConverter.listEntityToListDto(drivers);
+    }
+
+    @Transactional(readOnly = true)
+    public DriverDTO findById(UUID id) {
+        Driver driver = this.driverRepository.findById(id).orElseThrow();
+        return this.driverConverter.entityToDto(driver);
+    }
+
     @Transactional(rollbackFor = Exception.class)
     public DriverDTO createDriver(DriverDTO driverDTO) {
         Driver driver = this.driverConverter.dtoToEntity(driverDTO);

@@ -11,8 +11,6 @@ import org.springframework.context.event.EventListener;
 
 @SpringBootApplication
 public class CarApplication {
-
-
 	private final DriverService driverService;
 	private final SedanCarService sedanCarService;
 
@@ -30,10 +28,10 @@ public class CarApplication {
 		DriverDTO driverDTO = createMe();
 		SedanCarDTO sedanCarDTO = createClioV();
 
+		createMe2();
 		this.driverService.createDriverSedanCar(driverDTO.getId(), sedanCarDTO);
 
 	}
-
 	private SedanCarDTO createClioV() {
 		SedanCarDTO sedanCarDTO = new SedanCarDTO();
 		sedanCarDTO.setName("Clio V");
@@ -49,6 +47,13 @@ public class CarApplication {
 	private DriverDTO createMe() {
 		DriverDTO driverDTO = new DriverDTO();
 		driverDTO.setName("Jules BONFILLOUP");
+		driverDTO.setAge(23);
+		driverDTO = this.driverService.createDriver(driverDTO);
+		return driverDTO;
+	}
+	private DriverDTO createMe2() {
+		DriverDTO driverDTO = new DriverDTO();
+		driverDTO.setName("Jules BON");
 		driverDTO.setAge(23);
 		driverDTO = this.driverService.createDriver(driverDTO);
 		return driverDTO;

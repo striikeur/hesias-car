@@ -9,6 +9,6 @@ import java.util.UUID;
 public interface SedanCarRepository extends JpaRepository<SedanCar, UUID> {
 
     List<SedanCar> findByTrunkSpaceGreaterThan(Float trunkSpace);
-    SedanCar findFirstByTrunkSpace(Float trunkSpace);
+    List<SedanCar> findFirstByTrunkSpace(Float trunkSpace);
 
 }

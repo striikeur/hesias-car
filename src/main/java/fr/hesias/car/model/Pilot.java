@@ -27,6 +27,10 @@ public class Pilot extends Driver {
         this.height = height;
     }
 
+    public Pilot(UUID id) {
+        super(id);
+    }
+
     public Integer getHeight() {
         return height;
     }

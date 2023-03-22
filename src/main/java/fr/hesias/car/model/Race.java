@@ -25,11 +25,10 @@ public class Race extends Ride {
     protected Race() {
     }
 
-    public Race(UUID id, String name, String departure, String arrival, Long date, String raceTrack, Pilot winner, List<Car> cars) {
+    public Race(UUID id, String name, String departure, String arrival, Long date, String raceTrack, Pilot winner) {
         super(id, name, departure, arrival, date);
         this.raceTrack = raceTrack;
         this.winner = winner;
-        this.cars = cars;
     }
 
     public String getRaceTrack() {
