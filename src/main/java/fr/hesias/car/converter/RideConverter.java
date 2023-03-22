@@ -5,7 +5,7 @@ import fr.hesias.car.model.Ride;
 
 import java.util.List;
 
-public class RideConverter implements EntityToDtoConverter<Ride, RideDTO> {
+public class RideConverter extends EntityToDtoConverter<Ride, RideDTO> {
     @Override
     public Ride dtoToEntity(RideDTO rideDTO) {
         return null;

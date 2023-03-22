@@ -2,11 +2,13 @@ package fr.hesias.car.converter;
 
 import fr.hesias.car.dto.SedanCarDTO;
 import fr.hesias.car.model.SedanCar;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SedanCarConverter implements EntityToDtoConverter<SedanCar, SedanCarDTO> {
+@Component
+public class SedanCarConverter extends EntityToDtoConverter<SedanCar, SedanCarDTO> {
     @Override
     public SedanCar dtoToEntity(SedanCarDTO sedanCarDTO) {
         return new SedanCar(sedanCarDTO.getId(),
