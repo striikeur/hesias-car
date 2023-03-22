@@ -40,6 +40,10 @@ public class Driver {
         this.age = age;
     }
 
+    public Driver(UUID id) {
+        this.id = id;
+    }
+
     public UUID getId() {
         return id;
     }

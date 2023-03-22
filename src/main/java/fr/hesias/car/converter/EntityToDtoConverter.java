@@ -14,5 +14,11 @@ public abstract class EntityToDtoConverter<Entity, DTO> {
         }
         return dtos;
     }
-    public abstract List<Entity> listDtoToListEntity(List<DTO> dtos);
+    public List<Entity> listDtoToListEntity(List<DTO> dtos) {
+        List<Entity> entities = new ArrayList<>();
+        for(DTO dto: dtos) {
+            entities.add(this.dtoToEntity(dto));
+        }
+        return entities;
+    }
 }
