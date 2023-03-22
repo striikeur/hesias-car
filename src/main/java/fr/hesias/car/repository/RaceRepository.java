@@ -12,7 +12,7 @@ import java.util.UUID;
 @Repository
 public interface RaceRepository extends JpaRepository<Race, UUID> {
 
-    @Query("select r from RaceDTO r where r.winner.id = :winner_id ")
+    @Query("select r from Race r where r.winner.id = :winner_id ")
     List<Race> findByWinnerId(@Param("winner_id") UUID winnerId);
 
 }
